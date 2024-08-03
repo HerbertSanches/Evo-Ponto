@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+}
+
+#erroCarregar button:hover {
+    background-color: var(--azul-escuro);
+    transition: transform 0.1s ease;
+}    
+
+#erroCarregar button:active {
+    transform: scale(0.95);
+}  
+@font-face {
+    font-family: 'ev_font';
+    src: url('src/assets/fontes/Ev_font.ttf') format('truetype');
+}
+
+.login_icon {
+    font-family: 'ev_font', sans-serif;
+}
+
+#evo_icon span {
+    font-family: 'ev_font', sans-serif;
+}
+
+#evo_icon img {
+    height: 30vh;
+    object-fit: cover; 
+}
+
+body{
+    margin: 0;
+    top:0;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: var(--azul-claro);
+}
+
+#login_container {
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+    width: 100vh;
+    color: var(--branco);
+    background-color: var(--azul-escuro);
+    border-radius: 20px;
+    padding: 10px;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.1 );
+    overflow: hidden;
+}
+
+#login {
+    background-color: var(--azul-escuro);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10%;
+    gap: 10px;
+}
+
+#evo_icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--branco);
+    
+}
+
+#evo_icon img {
+    object-fit: cover;
+    margin-top: 30%;
+}
+
+#erroCarregar {
+    display: none;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 80%;
+    width: 80%;
+}
+
+#erroImg img{
+    margin-top: 10px;
+    object-fit: cover;
+    height: 500px;
+    width: 100%;
+}
+
+.desabilitado {
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+#erroCarregar button {
+    background-color: var(--azul-claro);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    margin-left: 3px;
+    color: white;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+}
+
+.login_icon {
+    font-family: 'Ev_font', Times, serif;
+    font-size: 10rem;
+    border: none;
+}
+
+.userEpassword {
+    height: auto;
+    padding: 5px;
+    margin-bottom: 20px;
+    display: flex;
+    border-bottom: 3px solid var();
+    flex-direction: row;
+    align-items: center;
+    border-bottom: 3px solid var(--branco);
+}
+
+.userEpassword ::placeholder {
+    text-align: center;
+    color: var(--branco);
+}
+
+.userEpassword input {
+    border: none;
+    color: var(--branco);
+    background-color: transparent;
+    font-size: 16px;
+    width: 100%;
+}
+
+.userEpassword input:focus-visible {
+    outline: none;
+} 
+
+.userEpassword img {
+    width: 30px;
+    height: 30px;
+}
+
+.btn-entrar {
+    color: var(--azul-escuro);
+    font-weight: bold;
+    margin-top: 10px;
+    height: 38px;
+    width: 45%;
+    border: none;
+    background-color: var(--branco);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.1s ease;
+}  
+
+.btn-entrar:hover {
+    background-color: #d3d3d3;
+    scale: 1.05;
+}  
+
+.btn-entrar:active {
+    transform: scale(0.95);
+}  
+
+.login_erro {
+    display: none;
+    color: rgb(250, 73, 73);
+}
+
+@media screen and (max-width: 900px) {
+    body{
+        background-color: var(--azul-escuro);
+        box-shadow: none;
+    }
+
+    #login_container {
+        box-shadow: none; 
+    }
+
+    #erroImg img{
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #erroImg img{
+        height: 200px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    #erroImg img{
+        height: 150px;
+    }
+}

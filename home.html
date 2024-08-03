@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js" integrity="sha512-a+SUDuwNzXDvz4XrIcXHuCf089/iJAoN4lmrXJg18XnduKK6YlDHNRalv4yd1N40OKI80tFidF+rqTFKGPoWFQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   
+   
+    <link rel="stylesheet" href="view/styles/global.css">
+    <link rel="stylesheet" href="view/styles/home.css">
+    <link rel="stylesheet" href="view/styles/modal.css">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/dycalendarjs@1.2.1/css/dycalendar.min.css" integrity="sha256-FPzAdciveg2PwCOWcFUzn2MxOHFIiE07p5T9Bz2OXHo=" crossorigin="anonymous">
+    <title>ePonto</title>
+</head>
+<body>
+    <div id="erroCarregar">
+        <div id="erroImg"></div>
+        <div id="textoErro">Erro ao conectar com o servidor</div>
+        <button id="recarregar">Tentar carregar novamente</button>
+    </div>
+    
+
+    <div id="eponto-container">
+        <div class="background"></div>
+        <div class="titulo">
+            <p>ePonto</p>
+            <button id="logout"><img src="src/assets/images/logout.png" alt="Logout"></button>
+        </div>
+        
+        <div class="calendar-container">
+            <button class="padrao" id="prev"><img src="src/assets/images/seta-esquerda.png" alt=""></button>
+            <div class="calendar" id="calendar">
+                <!-- Dias serão inseridos aqui pelo JavaScript -->
+            </div>
+            <button id="next"><img src="src/assets/images/seta-direita.png" alt=""></button>
+            <button id="today">Hoje</button>
+        </div>
+
+        <br>
+
+        <div class="dataCompleta"><p></p></div>
+        
+        <hr>
+
+        <div class="nomeUsuario">Erro ao carregar nome</div>
+        
+        <div class="pontosDia">
+            <!--batidas inseridas aqui dinâmicamente-->
+        </div>
+        
+        <div class="horas">
+            <div class="somaHoras">Soma diária: <span id="soma"> 00:00</span> hrs</div>
+            <div class="diferencaHoras"><span id="restamFaltam">Restam</span> no dia: <span id="diferenca"> 00:00</span> hrs</div>
+        </div>
+        
+        <div class="baterPonto">
+            <button class="chamarPonto"><img src="src/assets/images/cronometro.png" alt=""></button>
+        </div>
+        
+    </div>
+  <!--  <button id="baterPonto" > recarrega</button> 
+    <button id="charHistPonto"> testesteteste</button> -->
+    <div class="showmodal"></div>
+    </script>
+    <script type="module" src="view/javascript/home.js" defer></script>
+    <script type="module" src="view/javascript/modal.js" defer></script>
+</body>
+</html>

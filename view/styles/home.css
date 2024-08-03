@@ -1,0 +1,380 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #3645c5;
+}
+
+.titulo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centraliza o conteúdo */
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    font-weight: 800;
+    background-color: var(--azul-escuro);
+    color: white;
+    width: 100%;
+    height: 8vh;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.titulo p {
+    margin: 0;
+    flex-grow: 1; /* Faz o título ocupar o espaço disponível */
+    text-align: center;
+}
+
+.titulo button {
+    background-color: transparent;
+    box-shadow: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+    position: absolute; /* Mantém o botão posicionado absolutamente */
+    right: 15px; /* Ajuste conforme necessário */
+}
+
+.titulo img {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+
+#eponto-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    border: 5px;
+    width: 60%;
+    height: 90vh;
+    overflow: hidden;
+    border-radius: 10px;
+    /* box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3); */
+    background-color: transparent; 
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white; 
+    border-radius: 10px; 
+    z-index: -1;
+}
+
+hr {
+    width: 30%;
+}
+
+.pontosDia {
+    width: 90%;
+    height: 400px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: auto;
+   /* box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);*/
+    scrollbar-width: none;
+    scrollbar-color: #3645c5 #b0f4f1; 
+}
+
+.pontosDia:hover {
+    scrollbar-width:thin;
+} 
+
+.batidas {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1%;
+    width: 95%;
+    height: 50px;
+    background-color: var(--azul-claro);
+    color: white;
+    border-radius: 5px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+}
+
+.calendar-container {
+    margin-top: 8vh;
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background-color: white;
+    width: 100%;
+}
+
+button {
+    background-color: var(--azul-claro);
+    height: 40px;
+    width: 40px;
+    display: flex;
+    object-fit: cover;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    margin-left: 3px;
+    color: white;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+}
+
+button img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+button:hover {
+    background-color: var(--azul-body);
+} 
+
+button:active {
+    transform: scale(0.95);
+} 
+
+.calendar {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 10px;
+}
+
+.day {
+    text-align: center;
+    cursor: pointer;
+}
+
+#erroCarregar {
+    display: none;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 80%;
+    width: 80%;
+}
+
+#erroCarregar button {
+    width: auto;
+}
+
+#erroImg img{
+    margin-top: 10px;
+    object-fit: cover;
+    height: 500px;
+    width: 100%;
+}
+
+#textoErro {
+    padding: 15px;
+    color: white;
+}
+
+
+.selected {
+    color: var(--azul-escuro);
+    font-weight: bold;
+    font-weight: 800;
+    border-bottom: 2px solid var(--azul-escuro);
+}
+
+.diaCalendar {
+    border-bottom: 2px;
+}
+
+hr {
+    width: 80%;
+}
+
+.dataCompleta {
+    padding: 5px;
+    font-weight: bold;
+    font-weight: 800;
+    color: var(--azul-claro);
+}
+
+.nomeUsuario {
+    padding: 5px;
+    font-weight: bold;
+    font-weight: 800;
+    color: var(--azul-claro);
+}
+
+.horas {
+    height: auto;
+    width: 100%;
+}
+
+.somaHoras, .diferencaHoras {
+    height: 20px;
+    padding-top: 10px;
+    font-size: 12px;
+    text-align: right;
+    margin-right: 8%;
+    margin-top: auto;
+    color: var(--azul-escuro);
+    font-weight: bold;
+}
+
+.baterPonto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+    margin-bottom: 5px;
+}
+
+.chamarPonto {
+    width: 100%; /* ou um valor específico */
+    height: auto; /* ou um valor específico */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    padding: 5px;
+    opacity: 0.3;
+}
+
+.chamarPonto img {
+    max-width: 100%;
+    height: 40px;
+    object-fit: cover; 
+}
+
+
+@media screen and (min-width: 1250px) {
+    #eponto-container {
+        width: 40%;
+        height: 90vh;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    #eponto-container {
+        width: 60%;
+    }
+
+    #erroImg img{
+        height: 300px;
+    }
+
+    .calendar{
+        box-shadow: none;
+        width: 100%;
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #eponto-container {
+        width: 95%;
+    }
+
+    #erroImg img{
+        height: 200px;
+    }
+
+    .calendar-container {
+        padding: 2px;
+    }
+
+    .calendar{
+        font-size: 15px;
+        box-shadow: none;
+        height: 40px;
+        text-align: center;
+        align-items: center;
+    }
+
+    button{
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .calendar{
+        font-size: 12px;
+    }
+
+    button{
+        padding: 8px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    #erroImg img{
+        height: 150px;
+    }
+
+    .calendar{
+        font-size: 11px;
+    }
+
+    button{
+        padding: 6px;
+    }
+}
+
+
+@media screen and (max-width: 300px) {
+    .calendar{
+        box-shadow: none;
+        width: 100%;
+        font-size: 10px;
+    }
+
+    button{
+        padding: 4px;
+    }
+
+    .horas {
+        height: auto;
+        width: 100%;
+    }
+
+    .somaHoras, .diferencaHoras {
+        font-size: 9px;
+    }
+
+    .chamarPonto {
+        margin-bottom: 0;
+        transform: scale(0.7);
+    }
+
+    .baterPonto {
+        margin-bottom: 0;
+    }
+
+    .titulo p {
+        margin-left: 37%;
+    }
+}
+
