@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"
+      integrity="sha512-a+SUDuwNzXDvz4XrIcXHuCf089/iJAoN4lmrXJg18XnduKK6YlDHNRalv4yd1N40OKI80tFidF+rqTFKGPoWFQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link rel="stylesheet" href="view/styles/global.css" />
+    <link rel="stylesheet" href="view/styles/login.css" />
+
+    <title>Evolução Sistemas Ponto</title>
+  </head>
+  <body>
+    <div id="erroCarregar">
+      <div id="erroImg"></div>
+      <div id="textoErro">Erro ao conectar com o servidor</div>
+      <button id="recarregar">Tentar carregar novamente</button>
+    </div>
+
+    <div id="login_container">
+      <div id="evo_icon">
+        <img src="src/assets/images/logo.png" alt="" />
+      </div>
+
+      <form id="login" method="post">
+        <div class="userEpassword">
+          <img src="src/assets/images/usuario.png" alt="" />
+          <!--imagem ou icone pela fonte do ev -->
+
+          <input
+            type="text"
+            name="user_name"
+            class="user_name"
+            placeholder="Usuário"
+          />
+        </div>
+
+        <div class="userEpassword">
+          <img src="src/assets/images/cadeado.png" alt="" />
+          <!--imagem ou icone pela fonte do ev -->
+
+          <input
+            type="password"
+            name="user_password"
+            class="user_password"
+            placeholder="Senha"
+          />
+        </div>
+
+        <div class="login_erro">Usuário e/ou senha inválidos</div>
+
+        <button class="btn-entrar">Entrar</button>
+        <!-- <button class="teste">Teste</button>  -->
+      </form>
+    </div>
+
+    <script type="module" src="view/javascript/login.js"></script>
+  </body>
+</html>
