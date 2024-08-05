@@ -1,4 +1,5 @@
 // teste
+//teste2
 class PontoRoot {
   constructor({ registro_limite, registro_posicao, registro_total, ponto }) {
     (this.RegistroLimite = registro_limite),
