@@ -1,5 +1,6 @@
-<!-- Por questões de segurança, será adotado alguns padrões para salvar no localStorage ou sessionStorage
-    começando com o nome do que seria e o nome aleatório criado para que não possam saber o que é, sendo assim:
+In this project, you can use the login: herbert and the password: 123. It is a project for study based on the demand of my work at Evolução Sistemas.
 
-    (o nome das chaves no local o sessionStorage não pode ser cryptografado toda vez pelas funções, pois as funções mudam os resultados todas as vezes
-    mas descryptografam corretamente, mas o Valores que vem da api em si são todas cryptografadas)
+Neste projeto você pode usar o login: herbert e a senha: 123 É um projeto para estudo baseado na demanda do meu trabalho na Evolução Sistemas.
+
+Este projeto é um projeto teste para bater ponto online para funcionários que estão viajando ou trabalhando remotamente, desenvolvido em JavaScript 
+puro devido ser um projeto de pequeno porte, este é o projeto que fiz para estudo para desenvolver o oficial que esta em uso na empresa até o presente momento.
